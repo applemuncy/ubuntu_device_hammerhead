@@ -1,5 +1,8 @@
 # ubuntu_device_hammerhead
 Device Tree Nexus 5 Ubuntu Touch
+This device is not supported by Canonical.
+
+
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -11,4 +14,4 @@ Storage | 16GB/32GB
 Display | 4.95
 Camera  | 8 MP, f/2.4, autofocus, OIS, LED flash
 
-![Alt text](https://upload.wikimedia.org/wikipedia/commons/e/ed/Nexus_5_(1).jpg?raw=true)
+![Alt text](https://upload.wikimedia.org/wikipedia/commons/0/07/Nexus-5-Ubuntu-Touch-small.png?raw=true)
