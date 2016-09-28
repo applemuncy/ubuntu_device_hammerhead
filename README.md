@@ -2,7 +2,6 @@
 Device Tree Nexus 5 Ubuntu Touch
 This device is not supported by Canonical.
 
-Ubports
 
 
 

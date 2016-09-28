@@ -31,8 +31,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/rootdir/root/init.hammerhead.rc:root/init.hammerhead.rc \
     device/lge/hammerhead/rootdir/root/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
-    device/lge/hammerhead/rootdir/recovery/fstab.hammerhead:root/fstab.hammerhead \
-    device/lge/hammerhead/rootdir/root/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
+    device/lge/hammerhead/rootdir/root/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc \
+		device/lge/hammerhead/rootdir/recovery/fstab.hammerhead:root/fstab.hammerhead
 
 # Input device files for hammerhead
 PRODUCT_COPY_FILES += \
