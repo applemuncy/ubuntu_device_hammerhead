@@ -27,12 +27,12 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ubuntu.widi.supported=1
 
-#ROOTDIR files
+# ROOTDIR Files
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/rootdir/root/init.hammerhead.rc:root/init.hammerhead.rc \
-    device/lge/hammerhead/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
-    device/lge/hammerhead/fstab.hammerhead:root/fstab.hammerhead \
-    device/lge/hammerhead/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
+    device/lge/hammerhead/rootdir/root/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
+    device/lge/hammerhead/rootdir/recovery/fstab.hammerhead:root/fstab.hammerhead \
+    device/lge/hammerhead/rootdir/root/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
 
 # Input device files for hammerhead
 PRODUCT_COPY_FILES += \
