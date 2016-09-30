@@ -97,7 +97,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-TARGET_RECOVERY_FSTAB = device/lge/hammerhead/fstab.hammerhead
+TARGET_RECOVERY_FSTAB = device/lge/hammerhead/root/recovery/fstab.hammerhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead
 
