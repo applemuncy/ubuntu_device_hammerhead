@@ -1,0 +1,3 @@
+add_lunch_combo cm_hammerhead-user
+add_lunch_combo cm_hammerhead-userdebug
+add_lunch_combo cm_hammerhead-eng
