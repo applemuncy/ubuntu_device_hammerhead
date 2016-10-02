@@ -21,8 +21,8 @@
 
 
 # Ubports
-#PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init_wlan.sh:system/etc/init_wlan.sh
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/configs/etc/init_wlan.sh:system/etc/init_wlan.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ubuntu.widi.supported=1
@@ -32,14 +32,14 @@ PRODUCT_COPY_FILES += \
     device/lge/hammerhead/rootdir/root/init.hammerhead.rc:root/init.hammerhead.rc \
     device/lge/hammerhead/rootdir/root/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
     device/lge/hammerhead/rootdir/root/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc \
-		device/lge/hammerhead/rootdir/recovery/fstab.hammerhead:root/fstab.hammerhead
+    device/lge/hammerhead/rootdir/recovery/fstab.hammerhead:root/fstab.hammerhead
 
 # Input device files for hammerhead
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-		device/lge/hammerhead/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
-		device/lge/hammerhead/keylayout/Button_Jack.kl:system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl \
-		device/lge/hammerhead/keylayout/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
+    device/lge/hammerhead/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
+    device/lge/hammerhead/keylayout/Button_Jack.kl:system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl \
+    device/lge/hammerhead/keylayout/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
     device/lge/hammerhead/keychars/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
     device/lge/hammerhead/keychars/qpnp_pon.kcm:system/usr/keychars/qpnp_pon.kcm \
     device/lge/hammerhead/keychars/Button_Jack.kcm:system/usr/keychars/msm8974-taiko-mtp-snd-card_Button_Jack.kcm \
@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
-		frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
 # For GPS
@@ -161,7 +161,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle
 
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/lge/hammerhead/configs/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
     libqomx_core \
@@ -179,7 +179,7 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/gps.conf:system/etc/gps.conf
+    device/lge/hammerhead/configs/etc/gps.conf:system/etc/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -343,7 +343,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
 # set USB OTG enabled to add support for USB storage type
 PRODUCT_PROPERTY_OVERRIDES += \
