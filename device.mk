@@ -91,6 +91,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
+
+# Ubuntu Specific hammerhead
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/ubuntu/etc/ubuntu-touch-session.d/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
+		device/lge/hammerhead/ubuntu/lib/udev/rules.d/70-android.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
+		device/lge/hammerhead/ubuntu/usr/share/powerd/device_configs/config-default.xml:system/ubuntu/usr/share/powerd/device_configs/config-default.xml
+
 # For GPS
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/configs/etc/sec_config:system/etc/sec_config
