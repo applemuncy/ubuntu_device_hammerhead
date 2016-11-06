@@ -95,18 +95,18 @@ PRODUCT_COPY_FILES += \
 # Ubuntu Specific hammerhead
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/ubuntu/etc/ubuntu-touch-session.d/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
-		device/lge/hammerhead/ubuntu/etc/init/android-tools-adbd.conf:system/ubuntu/etc/init/android-tools-adbd.conf \
-		device/lge/hammerhead/ubuntu/etc/init/bluetooth-touch-hammerhead.conf:system/ubuntu/etc/init/bluetooth-touch-hammerhead.conf \
-		device/lge/hammerhead/ubuntu/etc/init/touch-symlinks.conf:system/ubuntu/etc/init/touch-symlinks.conf \
-		device/lge/hammerhead/ubuntu/etc/init/ubuntu-location-service.conf:system/ubuntu/etc/init/ubuntu-location-service.conf \
-		device/lge/hammerhead/ubuntu/etc/wifi/bcmdhd.cal:system/ubuntu/etc/wifi/bcmdhd.cal \
-		device/lge/hammerhead/ubuntu/lib/udev/rules.d/70-android.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
-		device/lge/hammerhead/ubuntu/usr/bin/hciattach:system/ubuntu/usr/bin/hciattach \
-		device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/HiFi:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/HiFi \
-		device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/msm8974-taiko-mtp-snd-card.conf:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/msm8974-taiko-mtp-snd-card.conf \
-		device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/VoiceCall:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/VoiceCall \
-		device/lge/hammerhead/ubuntu/usr/share/bluetooth-touch/hammerhead:system/ubuntu/usr/share/bluetooth-touch/hammerhead \
-		device/lge/hammerhead/ubuntu/usr/share/powerd/device_configs/config-default.xml:system/ubuntu/usr/share/powerd/device_configs/config-default.xml
+    device/lge/hammerhead/ubuntu/etc/init/android-tools-adbd.conf:system/ubuntu/etc/init/android-tools-adbd.conf \
+    device/lge/hammerhead/ubuntu/etc/init/bluetooth-touch-hammerhead.conf:system/ubuntu/etc/init/bluetooth-touch-hammerhead.conf \
+    device/lge/hammerhead/ubuntu/etc/init/touch-symlinks.conf:system/ubuntu/etc/init/touch-symlinks.conf \
+    device/lge/hammerhead/ubuntu/etc/init/ubuntu-location-service.conf:system/ubuntu/etc/init/ubuntu-location-service.conf \
+    device/lge/hammerhead/ubuntu/etc/wifi/bcmdhd.cal:system/ubuntu/etc/wifi/bcmdhd.cal \
+    device/lge/hammerhead/ubuntu/lib/udev/rules.d/70-android.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
+    device/lge/hammerhead/ubuntu/usr/bin/hciattach:system/ubuntu/usr/bin/hciattach \
+    device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/HiFi:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/HiFi \
+    device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/msm8974-taiko-mtp-snd-card.conf:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/msm8974-taiko-mtp-snd-card.conf \
+   device/lge/hammerhead/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/VoiceCall:system/ubuntu/usr/share/alsa/ucm/msm8974-taiko-mtp-snd-card/VoiceCall \
+   device/lge/hammerhead/ubuntu/usr/share/bluetooth-touch/hammerhead:system/ubuntu/usr/share/bluetooth-touch/hammerhead \
+   device/lge/hammerhead/ubuntu/usr/share/powerd/device_configs/config-default.xml:system/ubuntu/usr/share/powerd/device_configs/config-default.xml
 		
 # For GPS
 PRODUCT_COPY_FILES += \
@@ -123,6 +123,9 @@ PRODUCT_COPY_FILES += \
 # For SPN display
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/configs/etc/spn-conf.xml:system/etc/spn-conf.xml
+
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/lge/hammerhead/configs/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -360,7 +363,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+    persist.sys.usb.config=mtp
 
 # set USB OTG enabled to add support for USB storage type
 PRODUCT_PROPERTY_OVERRIDES += \
