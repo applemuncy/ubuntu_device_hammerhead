@@ -19,11 +19,11 @@
 # end klp-dev
 
 source ../../../common/clear-factory-images-variables.sh
-BUILD=2167285
+BUILD=937116
 DEVICE=hammerhead
 PRODUCT=hammerhead
-VERSION=LMY48M
+VERSION=kot49h
 SRCPREFIX=signed-
-BOOTLOADER=hhz12h
-RADIO=m8974a-2.0.50.2.26
+BOOTLOADER=hhz11k
+RADIO=m8974a-1.0.25.0.23
 source ../../../common/generate-factory-images-common.sh

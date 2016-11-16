@@ -76,8 +76,6 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 TARGET_USES_ION := true
 
-BOARD_EGL_CFG := device/lge/hammerhead/configs/etc/egl.cfg
-
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -99,7 +97,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-TARGET_RECOVERY_FSTAB = device/lge/hammerhead/rootdir/recovery/fstab.hammerhead
+TARGET_RECOVERY_FSTAB = device/lge/hammerhead/fstab.hammerhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead
 
