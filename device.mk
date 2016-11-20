@@ -382,7 +382,12 @@ PRODUCT_COPY_FILES += \
 endif
 
 $(call inherit-product, device/lge/hammerhead/mdt.mk)
-
+# Ubuntu Overlay Files
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
+    device/lge/hammerhead/ubuntu/powerd-config.xml:system/ubuntu/usr/share/powerd/device_configs/config-default.xml \
+    device/lge/hammerhead/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
+		
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
